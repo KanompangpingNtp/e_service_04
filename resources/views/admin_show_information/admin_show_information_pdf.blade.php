@@ -263,64 +263,36 @@
         <p>หมายเลขคำร้องที่ ............. / .............</p>
 
         <p class="right">เขียนที่ <span class="location">{{ $form->location }}</span> </p>
-        <p style="margin-left: 320px;">วันที่<span class="day">{{ $form->day }}</span>เดือน<span class="month">{{ $thaiMonth  }}</span>ปี<span class="year">{{ $thaiYear  }}</span></p>
+        <p class="right">วันที่<span class="day">{{ $form->day }}</span>เดือน<span class="month">{{ $thaiMonth  }}</span>ปี<span class="year">{{ $thaiYear  }}</span></p>
 
         <p><b>เรื่อง</b><span class="submission_name">{{ $form->submission_name }}</span></p>
         <p><b>เรียน</b> นายกเทศมนตรีเมืองต้นแบบ ๔.๐ </p><br>
+
+        <p>สิ่งที่ส่งมาด้วย ๑. สําเนาบัตรประจําตัวประชาชน จํานวน 2 ฉบับ</p>
+        <p style="margin-left: 65px;">๒. ภาพถ่าย จํานวน 4 ชุด</p>
+        <p style="margin-left: 65px;">๓.เอกสารต่างๆ ที่เกี่ยวข้อง จํานวน 4 ชุด</p>
 
         <p style="margin-left: 55px;">ข้าพเจ้า <span class="fullname">{{ $form->fullname }}</span> อาย <span class="age">{{ $form->age }}</span>ปี อาชีพ<span class="occupation">{{ $form->occupation }}</span></p>
         <p>อยู่บ้านเลขที่<span class="house_no">{{ $form->house_no }}</span>หมู่ที่<span class="village_no">{{ $form->village_no }}</span>ตรอก/ซอย<span class="alley">{{ $form->alley }}</span></p>
         <p>ถนน<span class="road">{{ $form->road }}</span>แขวง/ตำบล<span class="sub_district">{{ $form->sub_district }}</span>เขต/อำเภอ<span class="district">{{ $form->district }}</span></p>
         <p>จังหวัด<span class="province">{{ $form->province }}</span>หมายเลขโทรศัพท์<span class="phone">{{ $form->phone }}</span> </p>
 
-        <p style="margin-left: 55px;">ขอยื่นคำร้องต่อท่านนายกเทศบาลเมืองต้นแบบ ๔.๐ ดังนี้</p>
-        <p style="margin-left: 55px;"><span class="submission">{{ $form->submission }}</span></p>
+        <p style="margin-left: 55px;">ขอร้องทุกข์ร้องเรียน ต่อเทศบาลเมืองต้นแบบ ๔.๐ กรณี<span class="submission">{{ $form->submission_name }}</span></p>
+        <p style="margin-left: 55px;">ข้าพเจ้าขอความอนุเคราะห์ให้เทศบาลเมืองต้นแบบ ๔.๐ ดําเนินการ<span class="submission">{{ $form->submission }}</span></p>
 
-        <p>พร้อมยินยอมให้ท่านอาจารย์หลักฐานดังต่อไปนี้ จำนวน<span class="document_count">{{ $form->document_count }}</span>ฉบับ</p>
-        <p>ข้าพเจ้ายังยอมรับว่าจำเป็นต้อง จึงลงลายมือชื่อ/ลายเซ็นผู้ร้องเพิ่มเติมไว้เป็นหลักฐาน</p>
+        <p style="margin-left: 55px;">จึงเรียนมาเพื่อโปรดพิจารณาให้ความอนุเคราะห์ในเรื่อง ฯ ดังกล่าว จักขอบคุณยิ่ง</p>
 
         <table style="width: 100%; margin-top: 10px;">
             <tr>
                 <!-- คอลัมน์ซ้าย -->
                 <td style="width: 50%; vertical-align: top;">
-                    <div class="officer-note">
-                        <div class="officer-note-title">
-                            สำหรับเจ้าหน้าที่บันทึกเพิ่มเติม<br>
-                            (กรณีผู้ยื่นคำร้องไม่ยินยอมลงลายมือชื่อ)
-                        </div>
-                        <div class="dotted-line"></div>
-                        <div class="dotted-line"></div>
-                        <div class="dotted-line"></div>
-                        <div class="dotted-line"></div>
-                        <div class="dotted-line"></div>
-                        <div class="dotted-line"></div>
-                        <div class="dotted-line"></div>
-                        <div class="dotted-line"></div>
-                        <div class="dotted-line"></div>
-                        <div class="dotted-line"></div>
-                        <p style="text-align: center;">ลงชื่อ..............................................</p>
-                        <p style="text-align: center;">(..........................................) </p>
-                        <p style="text-align: center;">ตำแหน่ง...........................................</p>
-                    </div>
                 </td>
 
                 <!-- คอลัมน์ขวา -->
                 <td style="width: 50%; vertical-align: top; text-align: center;">
-                    <p>ลงชื่อ<span class="fullname">{{ $form->fullname }}</span>ผู้ยื่นคำร้อง</p>
-                    <p>(<span class="fullname">{{ $form->fullname }}</span>)</p>
-
-                    <p>ลงชื่อ .....................................ผู้เขียน/บันทึก</p>
-                    <p>( ............................................................ )</p>
-                    <p>ความคิดเห็นปลัดเทศบาลเมืองต้นแบบ ๔.๐</p>
-                    <p>........................................................................</p>
-                    <p>........................................................................</p>
-                    <p>ลงชื่อ ................................................</p>
-                    <p>( ............................................................)</p>
-                    <p>ความคิดเห็นนายกเทศบาลเมืองต้นแบบ ๔.๐</p>
-                    <p>........................................................................</p>
-                    <p>........................................................................</p>
-                    <p>ลงชื่อ ................................................</p>
-                    <p>( ............................................................)</p>
+                    <p>ขอแสดงความนับถือ</p>
+                    <p style="margin-top: 50px;">(<span class="fullname">{{ $form->salutation }}{{ $form->fullname }}</span>)</p>
+                    <p>ผู้ร้องทุกข์ร้องเรียน</p>
                 </td>
             </tr>
         </table>
